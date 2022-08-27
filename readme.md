@@ -1,5 +1,5 @@
 # REACT
-## Pengertian React
+## A. Pengertian React
 
 React adalah sebuah library JavaScript yang digunakan untuk membangun user interface yang interaktif. Library ini dibuat oleh Facebook dan bersifat open source. Library ini sangat populer digunakan dan selalu dikembangkan baik oleh kontributor utama ataupun komunitas. React terkenal karena konsep komponen. Di dalam React ada dua tipe komponen, yaitu:
 
@@ -107,3 +107,69 @@ Contoh :
 
 3. Jika sudah dijalankan tampilan yang muncul seperti gambar dibawah :
 
+![](/picture/react.png "")
+
+## B. Bootstrap
+
+adalah sebuah framework HTML, CSS, dan JavaScript yang berfokus untuk menyederhanakan pengembangan halaman web atau website. Pada umumnya, Bootstrap digunakan untuk mengimplementasikan berbagai pilihan warna, ukuran, font, dan layout yang ada dalam framework tersebut ke dalam sebuah website. Pada awal pengembangannya, Bootstrap memiliki nama lain, yaitu Twitter Blueprint. Mark Otto dan Jacob Thornton mengembangkan Bootstrap untuk meningkatkan konsistensi dalam berbagai alat internal yang digunakan dalam pengembangan website.
+
+Sebagai sebuah framework, Bootstrap menyediakan template untuk mendefiniskan style dasar seluruh elemen HTML dalam sebuah website. Hal ini akan mempermudah dalam pembuatan website dengan keseragaman visual tanpa harus mendefinisikan style attribute untuk setiap elemen HTML secara berulang-ulang.
+
+Selain elemen HTML dan CSS, Bootstrap juga manawarkan beberapa komponen JavaScript dalam bentuk plugin jQuery. Adanya plugin jQuery ini memungkinkan pengguna Bootstrap untuk menggunakan beberapa fitur interaktif seperti dialog box, tooltips, carousel, dan sebagainya.
+
+Setiap komponen Bootstrap terdiri dari tiga bagian utama:
+
+- HTML structure
+
+- CSS declarations
+
+- JavaScript code
+
+### Cara Menggunakan Bootsrap
+
+Berikut ini adalah cara menggunakan Bootstrap dalam project kamu:
+
+1. Langkah pertama adalah menyalin link menuju CSS dari Bootstrap:
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/cssbootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+2. Installasi dan Konfigurasi React Bootstrap
+
+    Sekarang kita lanjutkan belajar bagaimana cara installasi da konfigurasi React Bootstrap di dalam project React.js. Silahkan jalankan perintah berikut ini di dalam terminal/CMD dan pastikan berada di dalam project React.js.
+
+        npm install react-bootstrap@2.0.0-beta.5 bootstrap@5.1.0
+
+    jika perintah di atas berhasil dijalankan, maka seharusnya kita akan mendapatkan 2 list baru di dalam file package.json. tepatnya di dalam dependencies.
+
+        "dependencies": {
+
+        ...
+        "bootstrap": "^5.1.0",
+        "react-bootstrap": "^2.0.0-beta.5",
+        ...
+        },
+
+    jika sudah seperti di atas, artinya React Bootstrap sudah terinstall di dalam project React.js kita. Sekarang kita tinggal melakukan konfigurasi agar Bootstrap dapat digunakan di dalam project React.js
+
+    Silahkan buka file src/index.js dan ubah kode-nya menjadi seperti berikut ini :
+
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        //import Bootstrap CSS
+        import 'bootstrap/dist/css/bootstrap.min.css';
+        import './index.css';
+        import App from './App';
+
+        ReactDOM.render(
+        <React.StrictMode>
+        <App />
+        </React.StrictMode>,
+        document.getElementById('root')
+        );
+
+    Di atas, kita melakukan import CSS dari Boostrap, kurang lebih seperti berikut ini :
+
+        //import Bootstrap CSS
+        import 'bootstrap/dist/css/bootstrap.min.css';
+
+    Dengan begini, kita sudah bisa menggunakan Boostrap di dalam project React.js.
